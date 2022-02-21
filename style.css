@@ -1,0 +1,161 @@
+html {
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body,
+input {
+    font-family: sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.weather {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./hot.png) no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: background-color opa .8s;
+}
+
+.weather.warm {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./warm.jpg) no-repeat center/cover;
+}
+
+.weather.cool {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./cool.jpg) no-repeat center/cover;
+}
+
+.weather.cold {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./cold.png) no-repeat center/cover;
+}
+
+.wrapper {
+    width: 350px;
+    background-color: #fff;
+    height: 600px;
+    border-radius: 15px;
+    background: url(./hot.png) no-repeat center/cover;
+    padding: 30px 20px;
+    position: relative;
+    transition: .6s;
+}
+
+.wrapper.warm {
+    background: url(./warm.jpg) no-repeat center/cover;
+}
+
+.wrapper.cool {
+    background: url(./cool.jpg) no-repeat center/cover;
+}
+
+.wrapper.cold {
+    background: url(./cold.png) no-repeat center/cover;
+}
+
+.wrapper input {
+    padding: 10px 49px 10px 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    width: 100%;
+    border-radius: 0px 15px 0 15px;
+    font-size: 1.9rem;
+    outline: none;
+    margin-bottom: 40px;
+}
+
+.btn_submit {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    right: 30px;
+    top: 40px;
+    cursor: pointer;
+    
+}
+
+.btn_submit:hover i{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.btn_submit i {
+    font-size: 2rem;
+    color: #465a72;
+}
+
+.content {
+    text-shadow: 2px 2px rgb(0 0 0 / 50%);
+    white-space: nowrap;
+    text-align: center;
+    color: #fff;
+}
+
+.city {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.time {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.temperature {
+    font-size: 6.5rem;
+    font-weight: 800;
+    text-shadow: 4px 4px rgb(0 0 0 / 60%);
+    padding: 25px 20px;
+    background-color: rgb(255, 255, 255, 0.4);
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 2px 2px 0 2px rgb(0 0 0 / 50%);
+    margin-bottom: 30px;
+}
+
+.temperature sup {
+    vertical-align: super;
+    font-size: 5.4rem;
+}
+
+.desc {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 3px 3px rgb(0 0 0 / 40%);
+    margin-bottom: 40px;
+}
+
+.more_desc {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vision, .wind, .humidity {
+    display: flex;
+    flex-direction: column;
+}
+
+.vision span, .wind span, .humidity span {
+    margin-top: 15px;
+}
+
+@keyframes opa {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
